@@ -1,0 +1,322 @@
+body {
+  margin: 0;
+  background-color: #faebd7;
+}
+
+/* Header */
+header {
+  color: #211e20;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+  font-style: italic;
+
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+h1 a {
+  padding: 1rem 0 1rem 0;
+  margin: 0;
+
+  color: #211e20;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-size: clamp(36px, 12vw, 7rem);
+  text-transform: uppercase;
+  text-shadow: 4px 5px 1px #66605c;
+}
+
+h1 a:hover {
+  color: #ff924f;
+}
+
+header .fa-eye {
+  color: #b99bdb;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+/* Horizontal Nav Bar */
+nav {
+  justify-content: center;
+  background-color: #669b98;
+}
+
+.cb {
+  opacity: 0;
+  position: absolute;
+}
+
+ul {
+  margin-top: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(10ch, 1fr));
+  grid-template-rows: 65px;
+  column-gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+ul li {
+  list-style: none;
+
+  font-family: 'Aktiv-Grotesk-Extended', sans-serif;
+  text-transform: uppercase;
+  line-height: 1rem;
+}
+
+li a {
+  padding: 10px;
+  align-content: center;
+
+  color: black;
+  text-decoration: none;
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+}
+
+li a:hover {
+  font-weight: 400;
+}
+
+i .hlogo {
+  display: none;
+}
+
+.tix-icon {
+  display: block;
+  align-self: center;
+
+  font-size: 2.2rem;
+  color: #211e20;
+}
+
+.tix-text {
+  display: none;
+}
+
+.wrap {
+  display: inline-block;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.wrap:hover .tix-text {
+  display: block;
+}
+
+.wrap:hover .tix-icon {
+  display: none;
+}
+
+/* Gallery */
+h2 {
+  margin-top: 4rem;
+  margin-bottom: 0;
+  color: #211e20;
+  font-family: 'Aktiv-Grotesk-Extended', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(2rem, 7vw, 3rem);
+  letter-spacing: 0.5rem;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+figure {
+  margin: 0;
+
+  display: grid;
+  grid-template-rows: 525px 0.5fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+figure img {
+  align-self: flex-end;
+
+  border: 3px solid #b99bdb;
+  box-shadow: 10px 10px rgba(102, 96, 92, 0.5);
+}
+
+figure img:hover {
+ cursor: pointer;
+}
+
+figure a {
+  color: #211e20;
+  font-family: monospace;
+  text-decoration: none;
+}
+
+.creditURL {
+  max-width: 30ch;
+
+  color: #66605c;
+  font-size: 16px;
+  text-align: center;
+}
+
+h3 {
+  margin: 0;
+  font-size: 2rem;
+  text-decoration: 2px underline;
+}
+
+h3:hover {
+  opacity: 50%;
+}
+
+figcaption {
+  max-width: 35ch;
+  align-self: flex-start;
+  font-size: clamp(19px, 12vw, 1rem);
+
+  letter-spacing: 0.15rem;
+  text-align: center;
+}
+
+/* Modal Content Styles */
+.image-modal-popup {
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  overflow: auto;
+/* Wouldn't overflow it like this in a real-world situation to avoid the double scroll bar,
+but opted to do so for simplicity's sake & this assignment isn't about how it */
+
+  color: #fff;
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+.image-modal-popup.reveal {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-popup-wrapper {
+  margin: auto;
+  display: inline-flex;
+  align-items: center;
+}
+
+.modal-popup-wrapper img {
+  padding-right: 2rem;
+  object-fit: contain;
+}
+
+/* Footer */
+footer {
+  margin: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.socnav {
+  list-style: none;
+
+  display: inline-flex;
+  padding-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.socnav img {
+  width: 30px;
+  height: 28px;
+
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.socnav a {
+  padding: 2px;
+  margin: 2rem;
+}
+
+.socnav a > *:hover {
+  box-shadow: 5px 5px 8px 3px #b99bdb;
+  border-radius: 60%;
+}
+
+/* MEDIA QUERIES */
+/*  Hamburger Menu */
+@media screen and (max-width: 820px) {
+  body {
+    justify-content: center;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  /*  Hamburger Menu */
+  nav {
+    background-color: #669b98;
+  }
+
+  .hlogo {
+    padding: 0.5rem;
+    color: #faebd7;
+    text-align: center;
+    font-size: 4rem;
+
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    -ms-transition: -ms-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+  }
+
+  .hlogo:hover {
+    transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+  }
+
+  .hmenu {
+    display: none;
+  }
+
+  #ham:checked~.hmenu {
+    display: block;
+  }
+
+  #ham:checked~.hlogo {
+    align-self: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: repeat(4, 50px);
+    grid-template-columns: 50vw;
+    align-content: center;
+    justify-content: center;
+  }
+
+  li a {
+    align-self: center;
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+  }
+}
+
+/* Desktop*/
+@media screen and (min-width: 820px) {
+  .hlogo {
+    display: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+}
