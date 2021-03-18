@@ -12,11 +12,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", index);
 
-// app.use("/comingsoon", comingsoon)
-
-// 404 error page
-
-
 // env variables w/ default port
 const HOST = process.env.HOST;
 const PORT = process.env.PORT || 3000;

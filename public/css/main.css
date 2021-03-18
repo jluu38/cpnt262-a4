@@ -21,7 +21,7 @@ h1 {
 h1 a {
   padding: 0 0 1rem 0;
 
-  color: #786975;
+  /* color: #786975; */
   font-family: 'Montserrat', 'Segoe UI', sans-serif;
   font-size: clamp(36px, 12vw, 7rem);
   text-transform: uppercase;
@@ -29,6 +29,7 @@ h1 a {
 }
 
 h1 a:hover {
+  text-shadow: none;
   color: #ff924f;
 }
 
