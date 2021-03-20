@@ -29,7 +29,7 @@ h1 a {
 }
 
 h1 a:hover {
-  text-shadow: none;
+  /* text-shadow: none; */
   color: #ff924f;
 }
 
