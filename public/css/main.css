@@ -115,6 +115,33 @@ i .hlogo {
   display: none;
 }
 
+/* main */
+
+.creds {
+  display:grid;
+
+  justify-content: space-around;
+}
+
+.creds > * {
+  margin-top: 1rem;
+}
+
+.creds p {
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.creds a {
+  text-decoration: none;
+}
+
+.creds label {
+  font-family: monospace;
+  font-size: 16px;
+
+}
+
 /* Gallery */
 h2 {
   margin-top: 4rem;

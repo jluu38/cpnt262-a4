@@ -1,11 +1,13 @@
 # CPNT 262: JSON Gallery Endpoint with `fetch()`
 
 Created and maintained by Jess Luu
-- [Repository](https://github.com/jluu38/cpnt262-a3/)
-- [Heroku Page](https://cpnt-262-a3.herokuapp.com/)
+- [Repository](https://github.com/jluu38/cpnt262-a4/)
+- [Heroku Page](https://cpnt-262-a4.herokuapp.com/)
 
 ## Comments
 
+- Wanted to try something besides day/momentjs so opted for a random colour generator.
+  - The biggest issue was 
 
 ## Attributions
 
