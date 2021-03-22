@@ -1,13 +1,19 @@
 # CPNT 262: JSON Gallery Endpoint with `fetch()`
 
 Created and maintained by Jess Luu
+
 - [Repository](https://github.com/jluu38/cpnt262-a4/)
 - [Heroku Page](https://cpnt-262-a4.herokuapp.com/)
 
 ## Comments
 
 - Wanted to try something besides day/momentjs so opted for a random colour generator.
-  - The biggest issue was 
+  - The biggest issue was attempting to make the site title a random colour each time a page loaded, but instead, a random colour is static until the server is reset
+  - While not dynamic, I think it fulfills the custom module requirement? (You can see it inserted on *line 3* of `header.ejs`)
+- Gallery output is on the *Coming Soon* page.
+- Registration page is only linked on the *Login* page to avoid cluttering the nav bar.
+- `<head></head>` is omitted from the `head.ejs` partial because certain stylesheets and scripts are unique to a single page and had to be tuck them in with the partial.
+- 404 page was plucked from last assignment and therefore isn't styled -- sorry!
 
 ## Attributions
 
