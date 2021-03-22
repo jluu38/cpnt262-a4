@@ -1,15 +1,15 @@
 "use strict mode";
-// const images = require("../../routes/api/v0/images");
 
-// DOM manipulated gallery output
-fetch("/api/v0/")
-.then(function(response) {
-if (!response.ok) {
-  throw new Error('Not 200 OK');
-}
-return response.json();
-})
-  .then(function(images) {
+// fetch api for gallery output
+fetch("api/v0")
+  .then(function (response) {
+    if (!response.ok) {
+      throw new Error("Response was not okay");
+    }
+    return response.json();
+  })
+  // loop from previous assignment
+  .then(function (images) {
 
     for (let i = 0; i < images.length; i++) {
       //constants declared in the order they're nested 
@@ -67,8 +67,6 @@ return response.json();
         modalElement("img").alt = img.alt;
         modalElement("p").innerText = "Original size: " + img.naturalWidth + "px" + " x " + img.naturalHeight + "px";
 
-        // if/else used to keep consistency of images in modal at 700px since image sizes greatly vary
-        // images smaller than 700px are displayed in their original size (which is why this isn"t done with CSS)
         if (img.naturalHeight >= 700) {
           modalElement("img").height = 700;
         } else {
@@ -76,25 +74,10 @@ return response.json();
         }
       });
     });
-
-    // closes modal upon any click
     document.addEventListener("click", () => {
       modalPopUp.classList.remove("reveal");
-});
-})
-
-.catch(function(error) {
-  console.log(error);
-})
-// Parts of my attempts at a modal w/out external resources (corresponding html/css were deleted --
-// this is more so to remind myself where i was logically on the right or wrong track)
-// images[i].onclick = function () {
-//   modal.style.display = "block";
-//   modalImg.src = img.src;
-// };
-
-// function modalImg(images) {
-//   const expandImg = document.querySelector(".expandImg");
-//   expandImg.src = images.src;
-//   expandImg.parentElement.style.display = "block";
-// }
+    });
+  })
+  .catch(function (error) {
+    console.log(error);
+  });

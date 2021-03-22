@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="/public/js/app.js"></script>
+  <script src="js/app.js" defer></script>
   <%- include("../partials/head") %>
-
 </head>
 <body>
   <%- include("../partials/header") %>
-<main>
-  <h2 class="tagline"><%- pageTitle %></h2>
-  <div class="modal-content-wrapper">
-    <div class="grid modal-content">
+  <main>
+    <h2 class="tagline"><%- pageTitle %></h2>
+    <div class="modal-content-wrapper">
+      <div class="grid modal-content">
+      </div>
     </div>
-  </div>
-  <div class="image-modal-popup">
-    <div class="modal-popup-wrapper">
-      <img src="#" alt=" ">
-      <p></p>
+    <div class="image-modal-popup">
+      <div class="modal-popup-wrapper">
+        <img src="#" alt=" ">
+        <p></p>
+      </div>
     </div>
-  </div>
-</main>
-<%- include("../partials/footer") %>
-
+  </main>
+  <%- include("../partials/footer") %>
 </body>
 </html>

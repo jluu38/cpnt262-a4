@@ -1,19 +1,11 @@
 // modules
-const path = require("path");
-require("dotenv").config();
-
 const express = require('express');
 const app = express();
 app.set("view engine", "ejs");
 
+const path = require("path");
 const index = require("./routes/index");
-
-const api = require("./routes/api/v0");
-
-
-
-
-
+require("dotenv").config();
 
 // static file serving middleware
 app.use(express.static(path.join(__dirname, "public")));

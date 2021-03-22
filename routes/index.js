@@ -2,14 +2,9 @@ const express = require("express");
 const Router = express.Router();
 const api = require("./api/v0");
 
-// module for views - see comments for more context
+// random colour generator for site title
 const randomColor = require("randomcolor");
-
 const color = randomColor();
-// const color = randomColor({count:10});
-// for (let i = 0; i < color.length; i++){
-//   newColor = color[i];
-// }
 
 Router.use(function (request, response, next) {
   response.locals = {
@@ -45,7 +40,7 @@ Router.get("/register", function (request, response) {
   });
 })
 
-Router.get("/api/v0/", api);
+Router.use("/api/v0/", api);
 
 Router.get("*", function (request, response) {
   response.status(404);
